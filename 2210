@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPM Weekly Task Report - Federal IT Series 2210</title>
+    <script>
+        function generateTasks() {
+            const tasks = [
+                "Executed a comprehensive cybersecurity compliance audit, ensuring full regulatory adherence and mitigating security risks.",
+                "Reinforced network security by deploying advanced encryption protocols and intrusion detection systems.",
+                "Resolved over 15 high-priority technical support cases, enhancing system efficiency and user productivity.",
+                "Engineered a robust cloud backup infrastructure, fortifying data resilience and disaster recovery capabilities.",
+                "Delivered an advanced training session on data analytics, equipping personnel with critical data-driven decision-making skills.",
+                "Optimized SQL queries for lightning-fast data retrieval, significantly improving database performance.",
+                "Implemented an enterprise-level Active Directory group policy, streamlining access control and security compliance.",
+                "Conducted an exhaustive firewall rule assessment and optimization, fortifying network defenses against cyber threats.",
+                "Developed an interactive and highly insightful Tableau dashboard for real-time data visualization and strategic analysis.",
+                "Spearheaded the seamless migration of mission-critical servers to a secure cloud platform, enhancing scalability and reliability."
+            ];
+
+            // Shuffle the tasks and select five randomly
+            let selectedTasks = tasks.sort(() => 0.5 - Math.random()).slice(0, 5);
+            
+            // Display the selected tasks
+            document.getElementById("taskList").innerHTML = selectedTasks.map(task => `<li>${task}</li>`).join('');
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #333333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+        }
+        button {
+            padding: 12px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #ff9800;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body onload="generateTasks()">
+    <h1>Weekly Task Report</h1>
+    <p>Here are five impactful tasks you successfully completed last week:</p>
+    <ul id="taskList"></ul>
+    <button onclick="generateTasks()">Generate New Tasks</button>
+</body>
+</html>
